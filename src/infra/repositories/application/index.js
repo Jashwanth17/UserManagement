@@ -3,10 +3,10 @@ const { toEntity } = require('./transform');
 
 module.exports = ({ model }) => {
   // Fetch application by applicationId
-  const get = async (applicationId) => {
+  const get = async (id) => {
     try {
-      const application = await model.findByPk(applicationId, {
-        attributes: ['id', 'applicationId', 'applicationName', 'description']
+      const application = await model.findByPk(id, {
+
       });
       if (!application) {
         throw new Error('Application not found');
@@ -37,19 +37,18 @@ module.exports = ({ model }) => {
   };
 
   // Update an existing application
-  const update = (applicationData) => {
-    const applicationId = applicationData.applicationId;
+  const update = ({id,body}) => {
+
     const updatedData = {
-      applicationName: applicationData.applicationName,
-      description: applicationData.description
+      applicationName:body.applicationName,
+      description: body.description
     };
     
     console.log(updatedData);
     return model
       .update(updatedData, {
-        where: { applicationId },
+        where:  { id },
         returning: true,
-        attributes: ['id', 'applicationId', 'applicationName', 'description']
       })
       .then((result) => {
         if (result[0] === 0) {
@@ -64,10 +63,10 @@ module.exports = ({ model }) => {
   };
 
   // Delete an application by applicationId
-  const remove = async (applicationId) => {
+  const remove = async (id) => {
     try {
       const deleted = await model.destroy({
-        where: { applicationId }
+        where: { id }  
       });
       if (deleted === 0) {
         throw new Error('Application not found or already deleted');
@@ -75,7 +74,7 @@ module.exports = ({ model }) => {
       return { success: true, message: 'Application deleted successfully' };
     } catch (error) {
       console.error('Error occurred in delete:', error);
-      throw error;
+      return { success: false, message: error.message };
     }
   };
 

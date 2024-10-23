@@ -1,8 +1,9 @@
 const t = require('tcomb')
 const { compose } = require('ramda')
-const { cleanData, UUIDValidator } = require('../helper')
+const { cleanData, } = require('../helper')
 
 const walletGet = t.struct({
-  walletId: UUIDValidator
+  id: t.Any,
+  walletAmount:t.Any
 })
 module.exports = compose(cleanData, walletGet)

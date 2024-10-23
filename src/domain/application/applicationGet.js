@@ -1,8 +1,8 @@
 const t = require('tcomb')
 const { compose } = require('ramda')
-const { cleanData, UUIDValidator } = require('../helper')
+const { cleanData, } = require('../helper')
 
 const ApplicationGet = t.struct({
-  applicationId: UUIDValidator
+  id: t.Any
 })
 module.exports = compose(cleanData, ApplicationGet)

@@ -3,10 +3,10 @@ const { v4: uuidv4 } = require('uuid');
 
 module.exports = ({ model }) => {
   
-  const get = async (userId) => {
+  const get = async (id) => {
     try {
       const user = await model.findOne({
-        where: { userId },
+        where: { id },
       });
       if (!user) {
         throw new Error('User not found');
@@ -37,36 +37,40 @@ module.exports = ({ model }) => {
       .then((response) => toEntity(response.dataValues));
   };
 
-  const update = async (userId, body) => {
-    const updatedData = body;
-    updatedData.modifiedBy = 'system'; 
-
-    const existingUser = await model.findOne({
-      where: { userName: updatedData.userName }
-    });
-    if (existingUser && existingUser.userId !== userId) {
-      throw new Error('User with the same userName already exists');
-    }
-
+  const update = async ({id, body}) => {
+    const updatedData = {
+      userName:body.userName,
+      password: body.passoword
+      
+    };
+    
+    console.log(updatedData);
     return model
-      .update(updatedData, { where: { userId } })
-      .then(([result]) => {
-        if (result === 0) {
+      .update(updatedData, {
+        where:  { id },
+        returning: true,
+      })
+      .then((result) => {
+        if (result[0] === 0) {
           throw new Error('User ID not found in the database');
         }
-        return result;
+        return result[1][0]; // Returning the updated entity
+      })
+      .catch((error) => {
+        console.error('Error occurred in update:', error);
+        throw error;
       });
   };
 
-  const remove = async (userId) => {
+  const remove = async (id) => {
     try {
       const deleted = await model.destroy({
-        where: { userId }
+        where: { id }
       });
       if (!deleted) {
         throw new Error('User not found or could not be deleted');
       }
-      return deleted;
+      return { success: true, message: 'Users deleted successfully' };
     } catch (error) {
       console.error('Error deleting user:', error);
       throw error;

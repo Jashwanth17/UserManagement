@@ -12,18 +12,18 @@ module.exports = ({
   const router = Router();
 
   // Get wallet by walletId and userId
-  router.get('/:walletId', (req, res) => {
-    const walletId = req.params.walletId;
+  router.get('/:id', (req, res) => {
+    const id = req.params.id;
     const userId = req.body.userId; 
 
     getUseCase
-      .get(walletId, userId) 
+      .get(id, userId) 
       .then((data) => {
-        res.status(Status.OK).json(Success(data));
+        res.status(Status.OK ||200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST ||404).json(Fail(error.message));
       });
   });
 
@@ -43,34 +43,33 @@ module.exports = ({
   });
 
   // Update wallet linked with userId and walletId, including amount
-  router.put('/:walletId', (req, res) => {
-    const walletId = req.params.walletId;
-    const { userId, amount } = req.body; 
+  router.put('/:id', (req, res) => {
+    const id = req.params.id;
 
     putUseCase
-      .update({ userId, walletId, amount }) 
+      .update(id,{body: req.body }) 
       .then((data) => {
-        res.status(Status.OK).json(Success(data));
+        res.status(Status.OK ||200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST ||404).json(Fail(error.message));
       });
   });
 
   // Delete wallet by walletId linked with userId
-  router.delete('/:walletId', (req, res) => {
-    const walletId = req.params.walletId;
+  router.delete('/:id', (req, res) => {
+    const id = req.params.id;
     const userId = req.body.userId; 
 
     deleteUseCase
-      .remove({ walletId, userId }) 
+      .remove({ id, userId }) 
       .then((data) => {
-        res.status(Status.OK).json(Success(data));
+        res.status(Status.OK ||200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST || 404).json(Fail(error.message));
       });
   });
 

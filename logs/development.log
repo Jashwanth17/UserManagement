@@ -410,3 +410,256 @@
 {"level":"error"}
 {"level":"error"}
 {"code":"ERR_HTTP_INVALID_STATUS_CODE","level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"},"sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = 4;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = '4';"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"14","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = '4';"},"sql":"SELECT \"id\", \"applicationId\", \"applicationName\", \"description\" FROM \"application\" AS \"application\" WHERE \"application\".\"id\" = '4';"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":111,"line":"3727","name":"error","position":"111","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":111,"line":"3727","name":"error","position":"111","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"},"sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":111,"line":"3727","name":"error","position":"111","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":111,"line":"3727","name":"error","position":"111","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"},"sql":"SELECT \"id\", \"applicationId\", \"userName\", \"password\", \"createdAt\", \"modifiedAt\" FROM \"users\" AS \"users\" WHERE \"users\".\"userId\" = '7' LIMIT 1;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error","name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"98","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"userId\", \"walletAmount\", \"createdAt\", \"modifiedAt\" FROM \"wallet\" AS \"wallet\" WHERE \"wallet\".\"walletId\" = '3' LIMIT 1;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":113,"line":"3727","name":"error","position":"98","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \"id\", \"userId\", \"walletAmount\", \"createdAt\", \"modifiedAt\" FROM \"wallet\" AS \"wallet\" WHERE \"wallet\".\"walletId\" = '3' LIMIT 1;"},"sql":"SELECT \"id\", \"userId\", \"walletAmount\", \"createdAt\", \"modifiedAt\" FROM \"wallet\" AS \"wallet\" WHERE \"wallet\".\"walletId\" = '3' LIMIT 1;"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"info","message":"🤘 API - Port 9000"}
+{"level":"error"}

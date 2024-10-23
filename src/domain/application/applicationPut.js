@@ -2,13 +2,13 @@ const t = require('tcomb')
 const { compose } = require('ramda')
 const {
   cleanData,
-  UUIDValidator,
+  //UUIDValidator,
   ApplicationNameValidator,
   DescriptionValidator
 } = require('../helper')
 
 const ApplicationPut = t.struct({
-  applicationId: UUIDValidator,
+  id: t.Any,
   applicationName: ApplicationNameValidator,
   description: DescriptionValidator
 })

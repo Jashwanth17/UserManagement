@@ -2,15 +2,15 @@ const t = require('tcomb')
 const { compose } = require('ramda')
 const {
   cleanData,
-  UUIDValidator,
-  UserNameValidator,
-  PasswordValidator
+  // UUIDValidator,
+  // UserNameValidator,
+  // PasswordValidator
 } = require('../helper')
 const users = t.struct({
-  id: UUIDValidator,
-  userId: UUIDValidator,
-  userName: UserNameValidator,
-  password: PasswordValidator
+  id: t.Any,
+  userId: t.Any,
+  userName: t.Any,
+  password: t.Any
 })
 
 module.exports = compose(cleanData, users)

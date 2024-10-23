@@ -1,11 +1,12 @@
 const { ApplicationGet } = require('../../domain/application')
 
 module.exports = ({ applicationRepository }) => {
-  const get = async (applicationId) => {
+  const get = async (id) => {
     try {
-      const validatedApplicationId = await ApplicationGet({ applicationId })
+      console.log(id)
+      const validatedid = await ApplicationGet({id}) 
       const application = await applicationRepository.get(
-        validatedApplicationId.applicationId,
+        validatedid.id,
       )
       return application
     } catch (error) {

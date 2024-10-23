@@ -1,19 +1,17 @@
 const { walletGet } = require('../../../src/domain/wallet');
+const { walletAmountValidator } = require('../../domain/helper');
 
-module.exports = ({ walletRepository, usersRepository }) => {
-  const get = async (walletId) => {
+module.exports = ({ walletRepository,}) => {
+  const get = async (id) => {
     try {
     
-      const validatedWalletId = await walletGet({ walletId });
+      const validatedid = await walletGet({ id });
 
-      const wallet = await walletRepository.get(validatedWalletId.walletId);
-
-      const user = await usersRepository.get(wallet.userId);
+      const wallet = await walletRepository.get(validatedid.id);
 
       const extractedWallet = {
-        userId: user.userId,
-        walletId: wallet.walletId,
-        walletAmount: wallet.amount,
+        userId: wallet.userId,
+        walletAmount: wallet.walletAmount
       };
 
       return extractedWallet;

@@ -5,8 +5,8 @@ module.exports = ({ usersRepository }) => {
   const get = async (userId) => {
     try {
       // Validate the userId and retrieve user details
-      const validatedUserId = await usersGet({ userId });
-      const user = await usersRepository.get(validatedUserId.userId);
+      // const validatedUserId = await usersGet({ userId });
+      const user = await usersRepository.get(userId);
 
       // Extract relevant user information
       const extractedUser = {

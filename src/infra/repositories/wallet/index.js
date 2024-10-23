@@ -5,10 +5,10 @@ const { v4: uuidv4 } = require('uuid');
 module.exports = ({ model }) => {
 
   // Get wallet by walletId (which is the same as userId)
-  const get = async (walletId) => {
+  const get = async (id) => {
     try {
       const wallet = await model.findOne({
-        where: { walletId },
+        where: { id },
       });
       if (!wallet) {
         throw new Error('Wallet not found');
@@ -43,33 +43,35 @@ module.exports = ({ model }) => {
   };
 
   // Update wallet by walletId (same as userId)
-  const update = async (...args) => {
-    const walletId = args[0].walletId;
-    const updatedData = args[0];
-    updatedData.modifiedBy = ''; 
-
-    const existingWallet = await model.findOne({
-      where: { walletId }
-    });
-    if (!existingWallet) {
-      throw new Error('Wallet not found');
-    }
-
+  const update = async ({id, body}) => {
+    const updatedData = {
+      walletAmount:body.walletAmount,
+      
+    };
+    
+    console.log(updatedData);
     return model
-      .update(updatedData, { where: { walletId } })
-      .then(([result]) => {
-        if (result === 0) {
-          throw new Error('Wallet not found or could not be updated');
+      .update(updatedData, {
+        where:  { id },
+        returning: true,
+      })
+      .then((result) => {
+        if (result[0] === 0) {
+          throw new Error('walletID not found in the database');
         }
-        return result;
+        return result[1][0]; // Returning the updated entity
+      })
+      .catch((error) => {
+        console.error('Error occurred in update:', error);
+        throw error;
       });
   };
 
   // Delete wallet by walletId (same as userId)
-  const remove = async (walletId) => {
+  const remove = async (id) => {
     try {
       const deleted = await model.destroy({
-        where: { walletId }
+        where: { id }
       });
       if (!deleted) {
         throw new Error('Wallet not found or could not be deleted');
