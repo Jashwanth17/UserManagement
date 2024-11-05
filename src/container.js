@@ -9,6 +9,8 @@ const database = require('./infra/database')
 const response = require('./infra/support/response')
 const date = require('./infra/support/date')
 const repository = require('./infra/repositories')
+const symmetric= require('../src/infra/symmetric')
+const auth = require('../src/interfaces/http/auth')
 
 const container = createContainer()
 
@@ -23,7 +25,9 @@ container
     response: asFunction(response).singleton(),
     date: asFunction(date).singleton(),
     config: asValue(config),
-    repository: asFunction(repository).singleton()
+    repository: asFunction(repository).singleton(),
+    symmetric: asFunction(symmetric).singleton(),
+    auth: asFunction(auth).singleton()
   })
 
 module.exports = container
@@ -33,4 +37,3 @@ module.exports = container
 
 
 
-//In the above code jwt and auth folder and file change

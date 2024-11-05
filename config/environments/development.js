@@ -7,8 +7,13 @@ module.exports = {
       maxFiles: 2,
       colorize: false
     },
+    authSecret: process.env.AUTHSECRET,
+    expiryTime: process.env.EXPIRYTIME,
     encryptionMethod: process.env.ENCRYPTION_METHOD,
     characterEncodeMethod: process.env.CHARACTER_ENCODING_METHOD,
-    encryptionEncodeMethod: process.env.ENCRYPTION_ENCODE_METHOD
+    encryptionEncodeMethod: process.env.ENCRYPTION_ENCODE_METHOD,
+    authSession: {
+      session: false
+    }
   }
   

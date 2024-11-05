@@ -7,10 +7,14 @@ module.exports = ({
   logger,
   putUseCase,
   deleteUseCase,
+  auth,
   response: { Success, Fail }
 }) => {
   const router = Router();
   
+  // Apply authentication to all routes
+  router.use(auth.authenticate());
+
   // GET user by ID
   router.get('/:id', (req, res) => {
     const id = req.params.id;
@@ -39,12 +43,12 @@ module.exports = ({
     postUseCase
       .create({ body: req.body })
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
         const errorMsg = error.message || 'Something went wrong.';
-        res.status(Status.BAD_REQUEST || 404 ).json({ error: errorMsg });
+        res.status(Status.BAD_REQUEST || 404).json({ error: errorMsg });
       });
   });
 
@@ -71,11 +75,11 @@ module.exports = ({
     deleteUseCase
       .remove({ id }) // Pass userId to remove function
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST ||404).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST || 404).json(Fail(error.message));
       });
   });
 

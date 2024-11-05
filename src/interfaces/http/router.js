@@ -23,6 +23,7 @@ module.exports = ({ config, logger }) => {
   apiRouter.use('/application', controller('application').router);
   apiRouter.use('/users', controller('users').router);
   apiRouter.use('/wallet', controller('wallet').router);
+  apiRouter.use('/token', controller('token').router)
 
   apiRouter.use('*', (req, res) => {
     res.status(404).send('Error: Route not found');

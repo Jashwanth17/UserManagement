@@ -7,9 +7,11 @@ module.exports = ({
   putUseCase,
   deleteUseCase,
   logger,
+  auth,
   response: { Success, Fail }
 }) => {
   const router = Router();
+  router.use(auth.authenticate())
 
   // Get Application
   router.get('/:id', (req, res) => {

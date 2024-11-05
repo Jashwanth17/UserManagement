@@ -7,38 +7,40 @@ module.exports = ({
   logger,
   putUseCase,
   deleteUseCase,
+  auth,
   response: { Success, Fail }
 }) => {
   const router = Router();
+  
+  // Apply authentication to all routes
+  router.use(auth.authenticate());
 
   // Get wallet by walletId and userId
   router.get('/:id', (req, res) => {
     const id = req.params.id;
-    const userId = req.body.userId; 
+    const userId = req.body.userId;
 
     getUseCase
-      .get(id, userId) 
+      .get(id, userId)
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST ||404).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST || 404).json(Fail(error.message));
       });
   });
 
   // Create new wallet linked with userId and amount
   router.post('/', (req, res) => {
-  // Extract userId and amount from request body
-
     postUseCase
-      .create( req.body ) // Pass userId to create function
+      .create(req.body)
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST || 404 ).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST || 404).json(Fail(error.message));
       });
   });
 
@@ -47,25 +49,25 @@ module.exports = ({
     const id = req.params.id;
 
     putUseCase
-      .update(id,{body: req.body }) 
+      .update(id, { body: req.body })
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);
-        res.status(Status.BAD_REQUEST ||404).json(Fail(error.message));
+        res.status(Status.BAD_REQUEST || 404).json(Fail(error.message));
       });
   });
 
   // Delete wallet by walletId linked with userId
   router.delete('/:id', (req, res) => {
     const id = req.params.id;
-    const userId = req.body.userId; 
+    const userId = req.body.userId;
 
     deleteUseCase
-      .remove({ id, userId }) 
+      .remove({ id, userId })
       .then((data) => {
-        res.status(Status.OK ||200).json(Success(data));
+        res.status(Status.OK || 200).json(Success(data));
       })
       .catch((error) => {
         logger.error(error);

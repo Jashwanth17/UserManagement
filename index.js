@@ -1,9 +1,12 @@
 const container = require('./src/container')
 const app = container.resolve('app')
 
-app
-  .start()
-  .catch((error) => {
+app.start().catch((error) => {
+  if (app.logger && app.logger.error) {
     app.logger.error(error.stack)
-    process.exit()
-  })
+  } else {
+    console.error('Error occurred during startup:', error)
+  }
+  process.exit()
+})
+

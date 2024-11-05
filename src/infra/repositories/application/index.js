@@ -1,13 +1,13 @@
 const { v4: uuidv4 } = require('uuid');
 const { toEntity } = require('./transform');
+const auth = require('../../../interfaces/http/auth');
 
 module.exports = ({ model }) => {
   // Fetch application by applicationId
-  const get = async (id) => {
+  const get = async (id, token) => {
     try {
-      const application = await model.findByPk(id, {
-
-      });
+      await auth.verifyToken(token); // Verify token before proceeding
+      const application = await model.findByPk(id, {});
       if (!application) {
         throw new Error('Application not found');
       }
@@ -19,54 +19,52 @@ module.exports = ({ model }) => {
   };
 
   // Create a new application
-  const create = (applicationData) => {
-    // Generate UUID for the id field
-    const newApplicationData = {
-      applicationName: applicationData.applicationName,
-      description: applicationData.description
-    };
-    
-    console.log('applicationData', newApplicationData);
+  const create = async (applicationData) => {
+    try {
+      const newApplicationData = {
+        applicationName: applicationData.applicationName,
+        description: applicationData.description,
+      };
 
-    return model.create(newApplicationData).then((response) => {
-      return toEntity(response); 
-    }).catch((error) => {
+      const response = await model.create(newApplicationData);
+      return toEntity(response);
+    } catch (error) {
       console.error('Error occurred in create:', error);
       throw error;
-    });
+    }
   };
 
   // Update an existing application
-  const update = ({id,body}) => {
+  const update = async ({ id, body }, token) => {
+    try {
+      await auth.verifyToken(token); 
+      const updatedData = {
+        applicationName: body.applicationName,
+        description: body.description,
+      };
 
-    const updatedData = {
-      applicationName:body.applicationName,
-      description: body.description
-    };
-    
-    console.log(updatedData);
-    return model
-      .update(updatedData, {
-        where:  { id },
+      console.log(updatedData);
+      const result = await model.update(updatedData, {
+        where: { id },
         returning: true,
-      })
-      .then((result) => {
-        if (result[0] === 0) {
-          throw new Error('Application ID not found in the database');
-        }
-        return result[1][0]; // Returning the updated entity
-      })
-      .catch((error) => {
-        console.error('Error occurred in update:', error);
-        throw error;
       });
+
+      if (result[0] === 0) {
+        throw new Error('Application ID not found in the database');
+      }
+      return result[1][0]; 
+    } catch (error) {
+      console.error('Error occurred in update:', error);
+      throw error;
+    }
   };
 
   // Delete an application by applicationId
-  const remove = async (id) => {
+  const remove = async (id, token) => {
     try {
+      await auth.verifyToken(token); // Verify token before proceeding
       const deleted = await model.destroy({
-        where: { id }  
+        where: { id },
       });
       if (deleted === 0) {
         throw new Error('Application not found or already deleted');
@@ -82,6 +80,6 @@ module.exports = ({ model }) => {
     get,
     create,
     update,
-    remove
+    remove,
   };
 };

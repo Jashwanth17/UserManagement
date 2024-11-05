@@ -28,15 +28,15 @@ module.exports = function (sequelize, DataTypes) {
       },
     },
     {
-      // hooks: {
-      //   beforeCreate: async (user) => {
-      //     try {
-      //       user.password = await encryptPassword(user.password);
-      //     } catch (error) {
-      //       console.error('Error encrypting password:', error);
-      //     }
-      //   }
-      // },
+      hooks: {
+        beforeCreate: async (user) => {
+          try {
+            user.password = await encryptPassword(user.password);
+          } catch (error) {
+            console.error('Error encrypting password:', error);
+          }
+        }
+      },
       freezeTableName: true,
       timestamps: true,
       updatedAt: 'modifiedAt'

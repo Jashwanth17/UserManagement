@@ -1,9 +1,9 @@
 const toEntity = (data) => {
     const entity = {
-      userId: data.userId,
+      userId: data.id,
       applicationId: data.applicationId,
-      userName: data.userName,
-      password: data.password,
+      // userName: data.userName,
+      // password: data.password,
     }
   
     return entity

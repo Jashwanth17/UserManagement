@@ -1,27 +1,22 @@
-const express = require('express');
+const express = require('express')
 
-module.exports = ({ config, router, logger }) => {
-  const app = express();
+module.exports = ({ config, router, logger, auth }) => {
+  const app = express()
 
-  app.disable('x-powered-by');
-  
-  // Middleware to parse JSON requests
-  app.use(express.json());
+  app.disable('x-powered-by')
+  app.use(auth.initialize())
+  app.use(router)
 
-  // Use the router for handling requests
-  app.use(router);
-
-  // Define the static folder for serving files
-  app.use(express.static('public'));
+  // we define our static folder
+  app.use(express.static('public'))
 
   return {
     app,
     start: () => new Promise((resolve) => {
       const http = app.listen(config.port, () => {
-        const { port } = http.address();
-        logger.info(`🤘 API - Port ${port}`);
-        resolve();  // Resolve the promise once the server starts
-      });
+        const { port } = http.address()
+        logger.info(`🤘 API - Port ${port}`)
+      })
     })
-  };
-};
+  }
+}
