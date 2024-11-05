@@ -6,7 +6,6 @@ module.exports = ({ model }) => {
   // Fetch application by applicationId
   const get = async (id, token) => {
     try {
-      await auth.verifyToken(token); // Verify token before proceeding
       const application = await model.findByPk(id, {});
       if (!application) {
         throw new Error('Application not found');
@@ -35,9 +34,8 @@ module.exports = ({ model }) => {
   };
 
   // Update an existing application
-  const update = async ({ id, body }, token) => {
+  const update = async ({ id, body },) => {
     try {
-      await auth.verifyToken(token); 
       const updatedData = {
         applicationName: body.applicationName,
         description: body.description,
@@ -60,9 +58,8 @@ module.exports = ({ model }) => {
   };
 
   // Delete an application by applicationId
-  const remove = async (id, token) => {
+  const remove = async (id,) => {
     try {
-      await auth.verifyToken(token); // Verify token before proceeding
       const deleted = await model.destroy({
         where: { id },
       });
